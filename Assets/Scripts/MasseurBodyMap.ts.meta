@@ -1,0 +1,86 @@
+- !<AssetImportMetadata/98a1999b-2b2c-40e6-8056-044844bd9f5a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 75e2a0bd-7e10-4514-96af-d67f3642f590
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 75e2a0bd-7e10-4514-96af-d67f3642f590
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 70688678-8382-4480-ac1b-f8292b1d75de
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/70688678-8382-4480-ac1b-f8292b1d75de>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: d0c53afa-281f-4d99-b1ce-037fd7a51535
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    humanBody: false
+    lowerBack: false
+    lowerBackL: false
+    lowerBackR: false
+    mannequin: false
+    neckBase: false
+    scapulaL: false
+    scapulaR: false
+    shoulderL: false
+    shoulderR: false
+    snapLandmarksToSkin: false
+    spineMid: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - mannequin: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      humanBody: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      neckBase: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      spineMid: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lowerBack: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      shoulderL: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      shoulderR: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scapulaL: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scapulaR: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lowerBackL: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lowerBackR: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      snapLandmarksToSkin: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurBodyMap - landmarks to skin points</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 mannequin {"hint":"Rollback only: the old code-built mannequin (its SceneObject is the body root)"}'
+    - '// @input AssignableType_2 humanBody {"hint":"The Asset Library body; skin height comes from its baked height grid"}'
+    - '// @input SceneObject neckBase {"hint":"Base of the neck (top of the spine line, v = 0)"}'
+    - '// @input SceneObject spineMid {"hint":"Middle of the spine"}'
+    - '// @input SceneObject lowerBack {"hint":"Lower back on the spine (bottom of the spine line, v = 1)"}'
+    - '// @input SceneObject shoulderL {"hint":"Top of the shoulder, +X side"}'
+    - '// @input SceneObject shoulderR {"hint":"Top of the shoulder, -X side"}'
+    - '// @input SceneObject scapulaL {"hint":"Shoulder blade centre, +X side"}'
+    - '// @input SceneObject scapulaR {"hint":"Shoulder blade centre, -X side"}'
+    - '// @input SceneObject lowerBackL {"hint":"Side of the lower back, +X side"}'
+    - '// @input SceneObject lowerBackR {"hint":"Side of the lower back, -X side"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input bool snapLandmarksToSkin = true {"hint":"Move the landmark objects onto the skin when the Lens starts"}'
+    - '// @ui {"widget":"group_end"}'

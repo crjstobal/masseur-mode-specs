@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/96462313-ec3c-48bb-894c-9faee2c28eb6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d1a41e9c-4614-4f6c-acff-a06fd184034c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d1a41e9c-4614-4f6c-acff-a06fd184034c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5d384f3c-47bc-49c3-be82-4b206b36c059
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5d384f3c-47bc-49c3-be82-4b206b36c059>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 31ff8b0e-21b0-4cd7-b01a-9bcad2f87792
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoRun: false
+    filter: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - autoRun: true
+      filter: ""
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurScenarioClient - runs the LEAF suite in preview</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input bool autoRun = true {"hint":"Run all scenarios when the preview starts"}'
+    - '// @input string filter {"hint":"Only run scenarios whose id contains one of these comma-separated words (empty = all)"}'
+    - '// @ui {"widget":"group_end"}'

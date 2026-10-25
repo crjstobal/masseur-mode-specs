@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/5ddfc362-0c13-42ba-afc5-343be8348fca>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 370a3b10-6c60-4f38-95ba-983a77b96030
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 370a3b10-6c60-4f38-95ba-983a77b96030
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 62b8306e-15ae-43e7-a5c6-89cbc67e6f33
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/62b8306e-15ae-43e7-a5c6-89cbc67e6f33>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e1420e19-1300-4318-994a-08375f4921d8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    chimeVolume: false
+    sessionChime: false
+    stepChime: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - stepChime: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      sessionChime: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      chimeVolume: 0.700000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurAudioController - step and session chimes</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input Asset.AudioTrackAsset stepChime {"hint":"Soft zen chime played when a step changes"}'
+    - '// @input Asset.AudioTrackAsset sessionChime {"hint":"Longer chime played when the session is complete"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float chimeVolume = 0.7 {"hint":"Chime volume", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

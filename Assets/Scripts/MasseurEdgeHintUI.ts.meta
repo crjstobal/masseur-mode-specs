@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/97613606-aff6-48a4-9147-c0f2e83b3330>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c3c28bdb-daa4-41c7-b35a-b23e58820017
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c3c28bdb-daa4-41c7-b35a-b23e58820017
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dfba3a4e-4c23-4608-bf3c-f669c67f9cee
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dfba3a4e-4c23-4608-bf3c-f669c67f9cee>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 60775214-daf9-4b18-ad1a-d28d90ee5b57
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraObject: false
+    distanceCm: false
+    hintText: false
+    sideOffsetCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      hintText: Controls
+      distanceCm: !<float> 60.000000
+      sideOffsetCm: !<float> 15.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurEdgeHintUI - edge-of-view hint toward the controls</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject cameraObject {"hint":"The camera the hint stays in front of"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string hintText = "Controls" {"hint":"Text next to the arrow"}'
+    - '// @input float distanceCm = 60 {"hint":"Distance in front of the eyes, cm", "widget":"slider", "min":40, "max":120, "step":1}'
+    - '// @input float sideOffsetCm = 15 {"hint":"Sideways offset from the centre of the view, cm", "widget":"slider", "min":5, "max":30, "step":0.5}'
+    - '// @ui {"widget":"group_end"}'

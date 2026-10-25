@@ -1,0 +1,116 @@
+- !<AssetImportMetadata/e7cc4bfe-8098-49c9-b055-e335a05137c8>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> be2d98db-b9ee-476f-92f3-d65ea967f0b4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> be2d98db-b9ee-476f-92f3-d65ea967f0b4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 06290513-3618-4414-93d5-41740954d399
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/06290513-3618-4414-93d5-41740954d399>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 8b29a4db-876e-452c-9645-349f6e309849
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    audioController: false
+    backMappedHoldSec: false
+    barInViewDegrees: false
+    bodyMap: false
+    cameraObject: false
+    controlBar: false
+    debugCameraBackCm: false
+    debugLookDownDeg: false
+    edgeHint: false
+    facePanelsToUser: false
+    ghostHands: false
+    introHintSec: false
+    landmarkLabels: false
+    placeStationAtCamera: false
+    scan: false
+    sessionManager: false
+    startMenu: false
+    station: false
+    stepCard: false
+    strokeLiftCm: false
+    strokes: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - sessionManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      startMenu: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      stepCard: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      controlBar: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      edgeHint: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      landmarkLabels: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      scan: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      strokes: !<MappingBased.AssignableType_8> 00000000-0000-0000-0000-000000000000
+      ghostHands: !<MappingBased.AssignableType_9> 00000000-0000-0000-0000-000000000000
+      audioController: !<MappingBased.AssignableType_10> 00000000-0000-0000-0000-000000000000
+      bodyMap: !<MappingBased.AssignableType_11> 00000000-0000-0000-0000-000000000000
+      station: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      placeStationAtCamera: true
+      facePanelsToUser: true
+      backMappedHoldSec: 1.200000
+      introHintSec: !<float> 5.000000
+      barInViewDegrees: !<float> 20.000000
+      strokeLiftCm: 0.500000
+      debugLookDownDeg: !<float> 0.000000
+      debugCameraBackCm: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurMain - Masseur Mode orchestrator</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 sessionManager {"hint":"Session state owner"}'
+    - '// @input AssignableType_2 startMenu {"hint":"Start menu above the upper back"}'
+    - '// @input AssignableType_3 stepCard {"hint":"Step card beyond the hips"}'
+    - '// @input AssignableType_4 controlBar {"hint":"Control bar on the right side of the table"}'
+    - '// @input AssignableType_5 edgeHint {"hint":"Edge-of-view hint toward the control bar"}'
+    - '// @input AssignableType_6 landmarkLabels {"hint":"Scan landmark labels"}'
+    - '// @input AssignableType_7 scan {"hint":"Simulated back scan"}'
+    - '// @input AssignableType_8 strokes {"hint":"Neon strokes on the back"}'
+    - '// @input AssignableType_9 ghostHands {"hint":"Ghost hands demonstrating each move"}'
+    - '// @input AssignableType_10 audioController {"hint":"Step and session chimes"}'
+    - '// @input AssignableType_11 bodyMap {"hint":"Landmarks to skin mapping"}'
+    - '// @input SceneObject station {"hint":"Root of the massage station (table, mannequin, panels); placed relative to the user at start"}'
+    - "// @input SceneObject cameraObject {\"hint\":\"Main camera (the user's eyes)\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - "// @input bool placeStationAtCamera = true {\"hint\":\"Place the station relative to where the user's eyes are when the Lens starts\"}"
+    - '// @input bool facePanelsToUser = true {"hint":"Turn the start menu, step card and control bar to face the user at start"}'
+    - "// @input float backMappedHoldSec = 1.2 {\"hint\":\"Seconds 'Back mapped' stays before the first step begins\", \"widget\":\"slider\", \"min\":0.2, \"max\":4, \"step\":0.1}"
+    - '// @input float introHintSec = 5 {"hint":"Seconds at the start of a session during which the edge hint points to the controls", "widget":"slider", "min":0, "max":15, "step":0.5}'
+    - "// @input float barInViewDegrees = 20 {\"hint\":\"The control bar counts as 'in view' within this angle from the view centre (degrees)\", \"widget\":\"slider\", \"min\":10, \"max\":40, \"step\":1}"
+    - '// @input float strokeLiftCm = 0.5 {"hint":"Height of the strokes above the skin, cm", "widget":"slider", "min":0.1, "max":3, "step":0.1}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input float debugLookDownDeg {"hint":"Preview captures only: tilt the camera down by this many degrees at start (pauses device tracking). 0 = off", "widget":"slider", "min":0, "max":80, "step":1}'
+    - '// @input float debugCameraBackCm {"hint":"Preview captures only: move the camera this many cm back from the seat at start. 0 = off", "widget":"slider", "min":0, "max":100, "step":1}'
+    - '// @ui {"widget":"group_end"}'

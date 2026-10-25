@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/6a28686d-c764-4acd-a11f-63f744949171>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0d58c2f5-c5ec-45f3-b7bd-e5daab70eec6
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0d58c2f5-c5ec-45f3-b7bd-e5daab70eec6
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e39607d6-0e08-4002-8cbb-3dbdd08974d0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e39607d6-0e08-4002-8cbb-3dbdd08974d0>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 68fb2a58-7326-4e42-8157-d18597ef0b8c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accentColor: false
+    noticeSec: false
+    viewingDistanceCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - viewingDistanceCm: !<float> 145.000000
+      noticeSec: !<float> 3.000000
+      accentColor: !<Vec4> {x: 0.550000, y: 1.000000, z: 0.950000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurStepCardUI - step name, hand part, time left, end card</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - "// @input float viewingDistanceCm = 145 {\"hint\":\"Distance from the user's eyes in cm; scales text to stay readable\", \"widget\":\"slider\", \"min\":60, \"max\":200, \"step\":1}"
+    - "// @input float noticeSec = 3 {\"hint\":\"Seconds the 'Next: ...' notice stays on the card after a step change\", \"widget\":\"slider\", \"min\":1, \"max\":8, \"step\":0.5}"
+    - '// @input vec4 accentColor = "{0.55, 1.0, 0.95, 1.0}" {"hint":"Accent color for the status line", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/60c38095-4d9d-45e9-b653-2a7359f16371>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2c29d180-5abf-43d2-a796-3ff58128bea2
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2c29d180-5abf-43d2-a796-3ff58128bea2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 092b98d9-a74f-4799-af3c-5a46eef8942f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/092b98d9-a74f-4799-af3c-5a46eef8942f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: bcd18f1f-5342-4d69-8d99-b30246e367bd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    debugTimeScale: false
+    extendMinutes: false
+    maxPacePercent: false
+    minPacePercent: false
+    paceStepPercent: false
+    skipConfirmTimeoutSec: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - paceStepPercent: !<float> 15.000000
+      minPacePercent: !<float> 50.000000
+      maxPacePercent: !<float> 150.000000
+      extendMinutes: !<float> 2.000000
+      skipConfirmTimeoutSec: !<float> 4.000000
+      debugTimeScale: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurSessionManager - session state, timer and pace</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float paceStepPercent = 15 {"hint":"Pace change per Slower / Faster press, in percent", "widget":"slider", "min":5, "max":30, "step":1}'
+    - '// @input float minPacePercent = 50 {"hint":"Slowest allowed pace, in percent", "widget":"slider", "min":25, "max":100, "step":5}'
+    - '// @input float maxPacePercent = 150 {"hint":"Fastest allowed pace, in percent", "widget":"slider", "min":100, "max":200, "step":5}'
+    - '// @input float extendMinutes = 2 {"hint":"Minutes added to the current step by the +2 min button", "widget":"slider", "min":1, "max":5, "step":1}'
+    - "// @input float skipConfirmTimeoutSec = 4 {\"hint\":\"Seconds before an unanswered 'Skip step?' cancels itself\", \"widget\":\"slider\", \"min\":2, \"max\":10, \"step\":0.5}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input float debugTimeScale = 1 {"hint":"Multiplies how fast session time passes (tests and demos). 1 = real time", "widget":"slider", "min":1, "max":120, "step":1}'
+    - '// @ui {"widget":"group_end"}'

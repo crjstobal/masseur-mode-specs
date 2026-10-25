@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/85ad52ba-f1fa-4fca-a7b3-0bff6f43d6f2>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a9806e2f-b536-4de3-94e5-fe01ddff4366
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a9806e2f-b536-4de3-94e5-fe01ddff4366
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 58214c78-664c-4fd2-af15-a362d4228ada
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/58214c78-664c-4fd2-af15-a362d4228ada>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 44e31a93-7f96-4453-842e-50b18cf22b48
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    disclaimerText: false
+    subtitleText: false
+    titleText: false
+    viewingDistanceCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - titleText: Masseur Mode
+      subtitleText: "Pick a body part, then a session length"
+      disclaimerText: Relaxation massage. Not a substitute for a physiotherapist.
+      viewingDistanceCm: !<float> 70.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurStartMenuUI - body part, duration, disclaimer</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string titleText = "Masseur Mode" {"hint":"Title at the top of the menu"}'
+    - '// @input string subtitleText = "Pick a body part, then a session length" {"hint":"One-line instruction under the title"}'
+    - '// @input string disclaimerText = "Relaxation massage. Not a substitute for a physiotherapist." {"hint":"Safety disclaimer shown at the bottom of the menu"}'
+    - "// @input float viewingDistanceCm = 70 {\"hint\":\"Distance from the user's eyes in cm; scales text to stay readable\", \"widget\":\"slider\", \"min\":40, \"max\":150, \"step\":1}"
+    - '// @ui {"widget":"group_end"}'

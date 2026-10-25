@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/be8ff813-ffde-4a96-9b41-ace5060d9f5b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> bc599fff-ee57-4671-985f-06f14ce9a4f4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> bc599fff-ee57-4671-985f-06f14ce9a4f4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1a743c7f-a4f3-43e6-8c90-f98b2cb1e356
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1a743c7f-a4f3-43e6-8c90-f98b2cb1e356>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 9f108e0b-56ce-4593-b7f1-5b1196238dd7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    extendLabel: false
+    viewingDistanceCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - viewingDistanceCm: !<float> 81.000000
+      extendLabel: +2 min
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurControlBarUI - pause, pace, +2 min, next</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - "// @input float viewingDistanceCm = 81 {\"hint\":\"Distance from the user's eyes in cm; scales text to stay readable\", \"widget\":\"slider\", \"min\":40, \"max\":150, \"step\":1}"
+    - '// @input string extendLabel = "+2 min" {"hint":"Label of the extend button"}'
+    - '// @ui {"widget":"group_end"}'

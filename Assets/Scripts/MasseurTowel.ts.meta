@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/50beb4aa-a713-4972-ba5f-784494652784>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 4c0054ca-c7a7-4076-99d9-92058ef43de0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 4c0054ca-c7a7-4076-99d9-92058ef43de0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8628ae0b-c0f7-4691-8116-e57a56e960b3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8628ae0b-c0f7-4691-8116-e57a56e960b3>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e142c212-5cff-4eeb-850a-12fe2dab3390
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bodyMap: false
+    gapBelowLowerBackCm: false
+    lengthCm: false
+    towelColor: false
+    towelMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - bodyMap: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      towelMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      towelColor: !<Vec3> {x: 0.960000, y: 0.950000, z: 0.900000}
+      gapBelowLowerBackCm: !<float> 7.000000
+      lengthCm: !<float> 50.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurTowel - towel over the hips</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 bodyMap {"hint":"Skin mapping (gives the lower-back landmark and the skin height)"}'
+    - '// @input Asset.Material towelMaterial {"hint":"Lit material for the towel; a tinted copy is made at runtime"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input vec3 towelColor = "{1.0, 0.97, 0.9}" {"hint":"Towel color (soft and light)", "widget":"color"}'
+    - "// @input float gapBelowLowerBackCm = 7 {\"hint\":\"Gap between the lower-back landmark and the towel's top edge, cm (keeps the back clear)\", \"widget\":\"slider\", \"min\":0, \"max\":15, \"step\":0.5}"
+    - '// @input float lengthCm = 50 {"hint":"Length of the towel along the body, cm (hips to upper thighs)", "widget":"slider", "min":20, "max":80, "step":1}'
+    - '// @ui {"widget":"group_end"}'

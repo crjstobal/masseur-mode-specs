@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/5bcc316b-3889-429c-905b-ed624a3f0f6e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> fc406c8c-7729-43ce-bcf9-c88fc8863774
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> fc406c8c-7729-43ce-bcf9-c88fc8863774
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9f84d8f2-84ee-4ced-8d6e-f5e0af5b8c07
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9f84d8f2-84ee-4ced-8d6e-f5e0af5b8c07>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: f5d7b833-e166-4b22-8d90-b4ea26c059c3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    skinColor: false
+    skinMaterial: false
+    skinRoughness: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - skinMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      skinColor: !<Vec3> {x: 0.860000, y: 0.760000, z: 0.660000}
+      skinRoughness: 0.750000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurMannequinMesh - stand-in body (simulated person)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input Asset.Material skinMaterial {"hint":"Lit material for the mannequin skin; a tinted copy is made at runtime"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input vec3 skinColor = "{0.86, 0.76, 0.66}" {"hint":"Skin tint of the stand-in body (keep it light: the display is additive)", "widget":"color"}'
+    - '// @input float skinRoughness = 0.75 {"hint":"Surface roughness, 0 = glossy, 1 = matte", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

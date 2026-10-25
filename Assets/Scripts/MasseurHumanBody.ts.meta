@@ -1,0 +1,77 @@
+- !<AssetImportMetadata/c5dc46b4-5c46-4ed1-ba9c-eea4e52c4062>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f95a9ebd-0db1-4ce9-9ede-ac10df3734c8
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f95a9ebd-0db1-4ce9-9ede-ac10df3734c8
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8bda9b9d-b180-4b46-bf05-e66ec69653bb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8bda9b9d-b180-4b46-bf05-e66ec69653bb>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 14ad395e-f340-49c1-9dc4-971d8c3cbc52
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    armsAlongBody: false
+    debugDumpObj: false
+    gridStepCm: false
+    legsTogether: false
+    proneThicknessScale: false
+    skinColor: false
+    skinMaterial: false
+    sourceBody: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - sourceBody: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      skinMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      skinColor: !<Vec3> {x: 0.920000, y: 0.790000, z: 0.690000}
+      armsAlongBody: true
+      legsTogether: true
+      proneThicknessScale: 0.800000
+      gridStepCm: !<float> 2.000000
+      debugDumpObj: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurHumanBody - Asset Library body, prone, baked</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject sourceBody {"hint":"Root of the A-pose skinned body instance (has the Skin component); hidden after the bake"}'
+    - '// @input Asset.Material skinMaterial {"hint":"Lit material for the skin; a tinted copy is made at runtime"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input vec3 skinColor = "{0.92, 0.79, 0.69}" {"hint":"Neutral, light skin tone (keep it light: the display is additive)", "widget":"color"}'
+    - '// @input bool armsAlongBody = true {"hint":"Bring the A-pose arms down so they rest along the sides of the body"}'
+    - '// @input bool legsTogether = true {"hint":"Bring the A-pose legs together (the source stands with the feet apart)"}'
+    - '// @input float proneThicknessScale = 0.8 {"hint":"Body thickness when lying prone, relative to the standing scan (a prone back settles; 1 = as scanned)", "widget":"slider", "min":0.6, "max":1, "step":0.01}'
+    - '// @input float gridStepCm = 2 {"hint":"Height grid spacing in cm", "widget":"slider", "min":1, "max":4, "step":0.5}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugDumpObj {"hint":"Print the baked mesh to the log as OBJ text (for offline inspection)"}'
+    - '// @ui {"widget":"group_end"}'

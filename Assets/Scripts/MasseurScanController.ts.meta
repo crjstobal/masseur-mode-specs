@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/f509569a-4460-486a-bc00-67db06000a4b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 921997c0-df82-4eb7-98d8-50e11a997779
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 921997c0-df82-4eb7-98d8-50e11a997779
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 92358b89-06c9-4493-85bb-ac5950a4d236
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/92358b89-06c9-4493-85bb-ac5950a4d236>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: f87a9814-8e35-443f-b053-981ad9d9eb89
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bodyMap: false
+    glowMaterial: false
+    scanColor: false
+    scanDurationSec: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - bodyMap: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      glowMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      scanDurationSec: !<float> 3.000000
+      scanColor: !<Vec3> {x: 0.550000, y: 1.000000, z: 0.950000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurScanController - simulated back scan</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 bodyMap {"hint":"Landmarks and skin mapping"}'
+    - '// @input Asset.Material glowMaterial {"hint":"Vertex-color material; an additive glow copy is made at runtime"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float scanDurationSec = 3 {"hint":"Seconds for the band to sweep from neck to lower back", "widget":"slider", "min":1, "max":8, "step":0.5}'
+    - '// @input vec3 scanColor = "{0.55, 1.0, 0.95}" {"hint":"Color of the scan band and landmark dots", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

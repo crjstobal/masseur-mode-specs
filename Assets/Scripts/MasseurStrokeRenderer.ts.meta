@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/862bb589-cf3c-4f9a-af3a-b43325749351>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 29c326d1-7d8e-4c37-8c36-2515a399e908
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 29c326d1-7d8e-4c37-8c36-2515a399e908
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 75b0ca90-03d3-4e20-b74b-0596d985abcf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/75b0ca90-03d3-4e20-b74b-0596d985abcf>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: ea0a9a0f-7599-480c-9141-cd7b8bf4aed3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    baseBrightness: false
+    drawInSec: false
+    glowMaterial: false
+    lineWidthCm: false
+    pulseBrightness: false
+    strokeColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - glowMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      strokeColor: !<Vec3> {x: 0.350000, y: 0.950000, z: 0.900000}
+      lineWidthCm: 1.500000
+      baseBrightness: 0.450000
+      pulseBrightness: 1.100000
+      drawInSec: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurStrokeRenderer - neon strokes, pulse and press rings</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input Asset.Material glowMaterial {"hint":"Vertex-color material; an additive glow copy is made at runtime"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input vec3 strokeColor = "{0.35, 0.95, 0.9}" {"hint":"Neon color of the strokes (calm cyan / soft teal)", "widget":"color"}'
+    - '// @input float lineWidthCm = 1.5 {"hint":"Line width in cm", "widget":"slider", "min":0.5, "max":4, "step":0.1}'
+    - '// @input float baseBrightness = 0.45 {"hint":"Resting brightness of the stroke (soft, not too bright)", "widget":"slider", "min":0.1, "max":1, "step":0.05}'
+    - '// @input float pulseBrightness = 1.1 {"hint":"Extra brightness of the travelling pulse", "widget":"slider", "min":0, "max":2, "step":0.05}'
+    - '// @input float drawInSec = 1 {"hint":"Seconds for a new stroke to draw in after a step change", "widget":"slider", "min":0.2, "max":3, "step":0.1}'
+    - '// @ui {"widget":"group_end"}'
