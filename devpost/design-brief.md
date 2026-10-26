@@ -7,7 +7,7 @@ status: approved
 <!-- Filled in by plan-lens from the learner's interview. Use the learner's words. Mark any value they didn't choose as (default). -->
 
 ## The one spatial moment
-I'm sitting at the head of a massage table, centered behind a person lying face down, with my hands on their back. Soft neon lines are drawn right on their back showing where my hands should move, a ghost pair of hands shows which part of the hand to use (palms, knuckles, thumbs, fingertips, forearm, or just pressing and holding), and a light pulse travels along the line at the pace I should follow, over and over, until the step ends and a zen chime moves me on to the next one.
+I'm kneeling astride the thighs of a person lying face down on a bed, with my hands on their back. Soft neon lines are drawn right on their back showing where my hands should move, a ghost pair of hands shows which part of the hand to use (palms, knuckles, thumbs, fingertips, forearm, or just pressing and holding), and a light pulse travels along the line at the pace I should follow, over and over, until the step ends and a zen chime moves me on to the next one.
 
 ## Why it belongs on glasses
 - Uses: draws in the world, leaves your body free (and, in the real version, shares your view).
@@ -16,17 +16,17 @@ I'm sitting at the head of a massage table, centered behind a person lying face 
 ## Product or overlay
 - Type: overlay: it responds to a real person's back.
 - What the real version would sense: the person's back and posture (shoulders, spine, shoulder blades, lower back), so the guide adapts to the person, not the other way round (seated, on their side, face down on a bed, etc.).
-- Stand-in for the preview: there is no person in the preview, so the body is a **3D mannequin lying face down on a virtual massage table** at real scale. Its landmarks (top of shoulders, both shoulder blades, spine line from neck to lower back, lower back) are authored in advance on the mannequin. Detection is faked with an automatic scan: after the user picks a duration, a soft light band sweeps over the back from neck to lower back (about 3 s (default)), landmark dots pop in one by one with small labels, the step card reads "Mapping back…" then "Back mapped", and the first step starts. All strokes are positioned relative to these landmarks, so they belong to the body, not to the room. The demo video will say the detection is simulated.
+- Stand-in for the preview: there is no person in the preview, so the body is a **3D person lying face down on a virtual bed** at real scale (a MakeHuman model, CC0, with a towel over the hips). Its landmarks (top of shoulders, both shoulder blades, spine line from neck to lower back, lower back) are authored in advance on the body. Detection is faked with an automatic scan: after the user picks a duration, a soft light band sweeps over the back from neck to lower back (about 3 s (default)), landmark dots pop in one by one with small labels, the step card reads "Mapping back…" then "Back mapped", and the first step starts. All strokes are positioned relative to these landmarks, so they belong to the body, not to the room. The demo video will say the detection is simulated.
 
 ## Where things live
-- Where the user is looking during the main task: down at their own hands on the mannequin's back, from a seated position at the head of the table (eye height about 115 cm (default)), with the back filling the middle of the view.
-- Mannequin and table: table about 185 x 70 cm, top at 70 cm high (default), its head end about 40 cm in front of the user (default), centered on the user. Adult mannequin, face down, arms resting by its sides (default).
+- Where the user is looking during the main task: down at their own hands on the person's back, kneeling astride their thighs (eyes about 75 cm above the mattress), with the whole back filling the middle of the view: lower back nearest, shoulder blades in the center, head at the far end.
+- Person and bed: a low double bed about 160 x 200 cm, mattress top about 50 cm high (default). Adult, face down along the bed's centerline, feet toward the user and head away, arms resting by their sides, a towel over the hips.
 - Neon strokes: drawn directly on the skin of the back (floating about 0.5 cm above the surface (default)), soft and not too bright, like neon tubes, in a calm light color such as cyan or soft teal (default). Line width about 1.5 cm (default). Arrowheads show direction.
 - Rhythm pulse: a brighter glow that travels along the stroke at the current pace and loops until the step ends. For press-and-hold steps it is instead a ring on each pressure point that fills while you should press and empties while you release.
 - Ghost hands: translucent, light-colored hands at real size, resting on the back right on the stroke, performing the move with the right part of the hand.
-- Step card (step name, which part of the hand, time left in the step): "al fondo", beyond the mannequin's hips, at the far end of the table, about 110 cm from the user and about 20 cm above the table top (default), tilted to face the user, about 30 x 12 cm (default). It keeps the center of the view (the back) free.
-- Control bar (Pause, Slower, Faster, +2 min, Next): on the side of the table, the user's chosen spot, where they must turn their head to see it. Right side (default), about 60 cm to the right of the table centerline, near the user's end, at table height plus about 15 cm (default), angled toward the user. Buttons at least 7 cm (default) across with clear icons and labels.
-- Start menu: a panel floating above the mannequin's upper back, about 70 cm from the user, a little below eye level, about 40 x 30 cm (default). It disappears once the session starts.
+- Step card (step name, which part of the hand, time left in the step): "al fondo", just above and beyond the person's head, about 115 cm ahead of the user and about 17 cm above the mattress, so it stays whole while looking down at the back, tilted to face the user, about 44 x 16 cm. It keeps the center of the view (the back) free.
+- Control bar (Pause, Slower, Faster, +2 min, Next): on the side of the bed, the user's chosen spot, where they must turn their head to see it. Right side (default), about 45 to 55 cm to the right of the centerline, next to the user, about 15 to 20 cm above the mattress, angled toward the user. Buttons at least 7 cm (default) across with clear icons and labels.
+- Start menu: a panel floating above the person's upper back, about 70 to 80 cm from the user, a little below eye level, about 44 x 36 cm. It disappears once the session starts.
 - Session end card: in the same spot as the step card.
 
 ## Hands and input
@@ -72,7 +72,7 @@ Resulting plans (default):
 - Scan and landmark dots: show right after picking a duration, fade out once "Back mapped" appears and the first step starts.
 - Ghost hands: show at the start of each step and perform the move twice, then fade out, leaving only the stroke and the pulse.
 - Neon stroke and pulse: show for the whole step, hide during the switch to the next step, then the new stroke draws in.
-- Step card: always visible at the far end of the table during the session; shows "Paused" while paused.
+- Step card: always visible beyond the head during the session; shows "Paused" while paused.
 - Step change: a soft zen chime plus a small visual notice on the step card ("Next: Knuckle glide" for about 3 s (default)). No sound at all during the massage itself, because the pace is adapted to what the person likes.
 - Control bar: always there at the side; visible when the user turns their head.
 - If something needs attention out of view: a small hint at the edge of the view pointing toward the control bar (default). The step-change chime covers the other case.
@@ -82,14 +82,14 @@ Resulting plans (default):
 ## Done criteria
 Each one can be checked in Lens Studio's preview.
 1. On the start menu, pinching "Back" selects it, the other body parts show "Coming soon" and can't be started, and pinching each of 10, 20, 40 and 60 min starts a session whose step list matches that duration's plan.
-2. After picking a duration, the scan sweeps over the mannequin's back, the landmark dots appear, the card reads "Back mapped", and the first neon stroke appears on the back.
-3. The neon strokes and the pulse stay anchored on the mannequin's back while the camera moves a little (small WASD steps and mouse look): they don't slide with the view.
+2. After picking a duration, the scan sweeps over the stand-in's back, the landmark dots appear, the card reads "Back mapped", and the first neon stroke appears on the back.
+3. The neon strokes and the pulse stay anchored on the stand-in's back while the camera moves a little (small WASD steps and mouse look): they don't slide with the view.
 4. Every control on the side bar is visible when turning toward it and works: Pause freezes the timer and pulse and Resume continues; Slower and Faster change the pace label and the pulse speed; +2 min adds 2:00 to the step's time left; Next only skips after Confirm, and Cancel (or waiting 4 s) keeps the step.
 5. When a step's time ends, the zen chime plays, the card briefly shows the next step's name, and the next stroke and ghost hands appear on the back.
 
 ## Out of scope
 - Other body parts (shown as "Coming soon"), other postures (seated, on the side).
-- Real body or posture detection; the mannequin and its landmarks stand in.
+- Real body or posture detection; the 3D body and its landmarks stand in.
 - Props such as rollers or vacuum cups.
 - Voice control, and any sound during the massage itself.
 - Remembering a person's preferences between sessions.
@@ -97,7 +97,7 @@ Each one can be checked in Lens Studio's preview.
 
 ## Risks and open questions
 - Controls on the side, where you have to turn your head (the learner's choice): SPECS' view is narrow, so they're out of view during the massage. Mitigated by the edge hint; keep an eye on it in the preview.
-- Usable human body model: if no good face-down mannequin can be found or generated, a simple stylized torso with clear shoulders and spine is acceptable, but the strokes must still read as being on a back.
+- Usable human body model: resolved. A code-built mannequin and the Lens Studio library body both read poorly from the user's seat; a MakeHuman body (CC0) posed face down in Blender reads as a real person.
 - Detection is simulated. The real version needs body and posture tracking; "feel unproven".
 - Pace, pressure and comfort over a long session, and whether strokes stay readable on real skin with oil and different lighting: "feel unproven".
 
@@ -129,3 +129,9 @@ This part is for you, after CLAD finishes.
 5. **Label what you know.** Write "logic proven" next to anything the tests and preview show working, and "feel unproven" next to anything only real glasses could tell you (comfort over time, real hand tracking, real recognition).
 6. **Fix with design notes, not code.** Tell your agent what to change in design terms, for example: "Move the step card 15 cm lower and next to the pan. Make the Next button twice as big. Re-run the tests." If a fix takes under a minute, like nudging a panel, do it yourself in the scene.
 7. **Submit.** Record a video under 3 minutes of your Lens in the preview, public on YouTube. Make your repo public with your Lens Studio project and this `devpost/` folder. Details are on the hackathon site: https://learn-specs.devpost.com/resources
+
+## Design changes after the first build (2026-10-25)
+Judged in the preview after the first CLAD build, then fixed with design notes:
+- **Body:** the code-built mannequin read as a blob from the seat, and the Lens Studio library body (about 1,200 triangles) was not much better. Replaced with a MakeHuman person (CC0), posed face down in Blender, with a terry towel over the hips, about 25,000 triangles.
+- **Text:** labels were small and mid grey, weak on an additive display. All labels are now 1.6 to 1.85 times larger and near white.
+- **Where the user is:** sitting at the head of the table put the person's head in the bottom third of the view and hid the back. The user now kneels astride the thighs on a bed, so the whole back fills the view and the head sits at the far end, out of the way. The step card moved beyond the head.

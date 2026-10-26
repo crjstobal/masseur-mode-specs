@@ -38,6 +38,7 @@
     scapulaR: false
     shoulderL: false
     shoulderR: false
+    skinGrid: false
     snapLandmarksToSkin: false
     spineMid: false
   ScriptTypesHidden:
@@ -51,6 +52,7 @@
   DefaultScriptInputs:
     - mannequin: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       humanBody: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      skinGrid: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
       neckBase: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       spineMid: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       lowerBack: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -69,7 +71,8 @@
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"References"}'
     - '// @input AssignableType_1 mannequin {"hint":"Rollback only: the old code-built mannequin (its SceneObject is the body root)"}'
-    - '// @input AssignableType_2 humanBody {"hint":"The Asset Library body; skin height comes from its baked height grid"}'
+    - '// @input AssignableType_2 humanBody {"hint":"Rollback only: the Snap Asset Library body (used when no skin grid is wired)"}'
+    - '// @input AssignableType_3 skinGrid {"hint":"Skin height grid sampled from the client body mesh (preferred height source)"}'
     - '// @input SceneObject neckBase {"hint":"Base of the neck (top of the spine line, v = 0)"}'
     - '// @input SceneObject spineMid {"hint":"Middle of the spine"}'
     - '// @input SceneObject lowerBack {"hint":"Lower back on the spine (bottom of the spine line, v = 1)"}'

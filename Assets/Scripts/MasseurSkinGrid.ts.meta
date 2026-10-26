@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/0e65cb45-a2ce-4878-a4fc-c0d2630f7e82>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 25e6bbdf-4dbf-491b-9b1e-da01131e4c7f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 25e6bbdf-4dbf-491b-9b1e-da01131e4c7f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 199e4d46-b59d-47f3-aa41-bce9a4cebf87
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/199e4d46-b59d-47f3-aa41-bce9a4cebf87>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 794b2bb8-6aa7-4819-9622-c62a1643435e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bodyRoot: false
+    excludeNames: false
+    gridStepCm: false
+    verifyGrid: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - bodyRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      excludeNames: "towel,short,hair,eyebrow,eyelash,high-poly,eye"
+      gridStepCm: !<float> 2.000000
+      verifyGrid: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurSkinGrid - skin height grid from the body mesh</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject bodyRoot {"hint":"Root of the static body (all render meshes below it are considered)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string excludeNames = "towel,short,hair,eyebrow,eyelash,high-poly,eye" {"hint":"Comma-separated name parts of meshes to ignore (towel, hair, eyes...)"}'
+    - '// @input float gridStepCm = 2 {"hint":"Grid spacing in cm", "widget":"slider", "min":1, "max":4, "step":0.5}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool verifyGrid {"hint":"Check the grid against the exact mesh after the bake and log the worst error (slow, one row per frame)"}'
+    - '// @ui {"widget":"group_end"}'

@@ -8,13 +8,14 @@
  * the room. The real Lens would get these points from body tracking; here
  * they are placed by hand on the stand-in (simulated detection).
  *
- * Inputs: the body root (Mannequin object), the human body (skin height
- * from its baked 2 cm grid of the real mesh) and the 9 landmarks. The
- * code-built mannequin is kept only as a rollback height source.
+ * Inputs: the body root (Mannequin object), the skin grid (2 cm height grid
+ * sampled from the client body mesh) and the 9 landmarks. The Snap body and
+ * the code-built mannequin are kept only as rollback height sources.
  * Must not: draw anything or read session state.
  */
 import {MasseurHumanBody} from "./MasseurHumanBody"
 import {MasseurMannequinMesh} from "./MasseurMannequinMesh"
+import {MasseurSkinGrid} from "./MasseurSkinGrid"
 import {BackUV} from "./MasseurMoveLibrary"
 
 export interface LandmarkInfo {
@@ -34,9 +35,13 @@ export class MasseurBodyMap extends BaseScriptComponent {
   @hint("Rollback only: the old code-built mannequin (its SceneObject is the body root)")
   mannequin: MasseurMannequinMesh
   @input
-  @hint("The Asset Library body; skin height comes from its baked height grid")
+  @hint("Rollback only: the Snap Asset Library body (used when no skin grid is wired)")
   @allowUndefined
   humanBody: MasseurHumanBody
+  @input
+  @hint("Skin height grid sampled from the client body mesh (preferred height source)")
+  @allowUndefined
+  skinGrid: MasseurSkinGrid
   @input
   @hint("Base of the neck (top of the spine line, v = 0)")
   neckBase: SceneObject
@@ -90,7 +95,8 @@ export class MasseurBodyMap extends BaseScriptComponent {
       print("MasseurBodyMap: a landmark @input is not wired")
       return
     }
-    if (this.humanBody) this.humanBody.ensureBaked()
+    if (this.skinGrid) this.skinGrid.ensureBaked()
+    else if (this.humanBody) this.humanBody.ensureBaked()
     if (this.snapLandmarksToSkin) {
       for (const lm of this.allLandmarkObjects()) {
         const p = this.toLocal(lm)
@@ -147,7 +153,8 @@ export class MasseurBodyMap extends BaseScriptComponent {
   }
 
   skinHeight(x: number, z: number): number {
-    if (this.humanBody && this.humanBody.isBaked) return this.humanBody.heightAt(x, z)
+    if (this.skinGrid && this.skinGrid.isBaked) return this.skinGrid.heightAt(x, z)
+    if (!this.skinGrid && this.humanBody && this.humanBody.isBaked) return this.humanBody.heightAt(x, z)
     if (this.mannequin) return this.mannequin.surfaceTopLocal(x, z)
     return this.toLocal(this.spineMid).y
   }

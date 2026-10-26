@@ -266,7 +266,7 @@ export class MasseurStrokeRenderer extends BaseScriptComponent {
       k *= move.intensity * this.fade * (v.edge ? 0.25 : 1)
       out[0] = v.pos.x; out[1] = v.pos.y; out[2] = v.pos.z
       out[3] = 0; out[4] = 1; out[5] = 0
-      out[6] = col.x * k; out[7] = col.y * k; out[8] = col.z * k; out[9] = 1
+      out[6] = col.x * k; out[7] = col.y * k; out[8] = col.z * k; out[9] = Math.min(1, k)
       b.setVertexInterleaved(i, out)
     }
     b.updateMesh()

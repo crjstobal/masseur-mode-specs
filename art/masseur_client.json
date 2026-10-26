@@ -1,0 +1,99 @@
+{
+  "id": "masseur_client",
+  "who": "Masseur Mode stand-in: adult lying face down on a massage table, arms by the sides, towel over the hips",
+  "sex": "m",
+  "age": 32,
+  "body": {
+    "weight": 0.5,
+    "muscle": 0.5,
+    "height": 0.55,
+    "proportions": 0.6
+  },
+  "skin": "young_caucasian_male",
+  "skin_tint": "#f3e6dc",
+  "eye_color": "brown",
+  "hair": "short02",
+  "hair_color": "#3e2c20",
+  "eyebrows": "eyebrow001",
+  "pose": {
+    "preset": "lie_back",
+    "body_rot": [
+      90,
+      0,
+      0
+    ],
+    "eyes": "closed",
+    "turn": [
+      [
+        "head",
+        "z",
+        -20
+      ],
+      [
+        "foot.L",
+        "x",
+        60
+      ],
+      [
+        "foot.R",
+        "x",
+        60
+      ],
+      [
+        "lowerarm01.L",
+        "lx",
+        10
+      ],
+      [
+        "lowerarm01.R",
+        "lx",
+        10
+      ],
+      [
+        "upperarm01.L",
+        "y",
+        10
+      ],
+      [
+        "upperarm01.R",
+        "y",
+        -10
+      ],
+      [
+        "upperarm01.L",
+        "x",
+        22
+      ],
+      [
+        "upperarm01.R",
+        "x",
+        22
+      ]
+    ]
+  },
+  "view": {
+    "yaw": 0,
+    "pitch": 40
+  },
+  "drapes": [
+    {
+      "name": "towel",
+      "shape": "sheet",
+      "size": [
+        0.8,
+        0.7
+      ],
+      "at": [
+        0,
+        0.1
+      ],
+      "res": 48,
+      "fabric": "terry_cloth",
+      "color": "#efeae0",
+      "tile": 4,
+      "preset": "heavy",
+      "thickness": 0.012,
+      "self": false
+    }
+  ]
+}

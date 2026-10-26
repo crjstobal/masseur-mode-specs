@@ -32,6 +32,7 @@
     distanceCm: false
     hintText: false
     sideOffsetCm: false
+    upOffsetCm: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -45,6 +46,7 @@
       hintText: Controls
       distanceCm: !<float> 60.000000
       sideOffsetCm: !<float> 15.000000
+      upOffsetCm: !<float> 11.000000
   ScriptTypes:
     -
       {}
@@ -59,4 +61,5 @@
     - '// @input string hintText = "Controls" {"hint":"Text next to the arrow"}'
     - '// @input float distanceCm = 60 {"hint":"Distance in front of the eyes, cm", "widget":"slider", "min":40, "max":120, "step":1}'
     - '// @input float sideOffsetCm = 15 {"hint":"Sideways offset from the centre of the view, cm", "widget":"slider", "min":5, "max":30, "step":0.5}'
+    - "// @input float upOffsetCm = 11 {\"hint\":\"Vertical offset from the centre of the view, cm (up keeps it off the client's back)\", \"widget\":\"slider\", \"min\":-20, \"max\":20, \"step\":0.5}"
     - '// @ui {"widget":"group_end"}'

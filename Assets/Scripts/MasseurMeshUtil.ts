@@ -125,10 +125,14 @@ export function scaleColor(c: vec4, k: number): vec4 {
   return new vec4(c.x * k, c.y * k, c.z * k, c.w)
 }
 
-/** Additive, two-sided, no-depth-write clone of a vertex-color material: a soft neon glow. */
+/**
+ * Two-sided, no-depth-write clone of a vertex-color material: a soft neon glow.
+ * Premultiplied alpha (vertex alpha = brightness) keeps the teal hue over light
+ * skin instead of saturating to white, and still fades to nothing at dim edges.
+ */
 export function makeGlowMaterial(base: Material): Material {
   const m = base.clone()
-  m.mainPass.blendMode = BlendMode.Add
+  m.mainPass.blendMode = BlendMode.PremultipliedAlpha
   m.mainPass.depthWrite = false
   m.mainPass.depthTest = true
   m.mainPass.twoSided = true

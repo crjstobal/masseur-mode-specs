@@ -6,6 +6,8 @@
  * of every step the matching pose rides the stroke (same timing as the pulse)
  * for `cyclesToShow` cycles, then fades out, leaving only stroke and pulse.
  * For press moves the hands sit on the active points and sink while pressing.
+ * By default the fingers point toward the client's head, as a masseur kneeling
+ * astride the thighs places them.
  *
  * Driven by Main: showMove(layout) on step change, setMotion(stepMotionTime)
  * every frame, hide() at session end. Lives under the mannequin, so the hands
@@ -19,11 +21,19 @@ import {pathPhase, pointState, samplePath, StrokeLayout} from "./MasseurStrokeLa
 interface HandInstance {
   root: SceneObject
   mats: Material[]
+  halfLength: number // half the hand's extent along its forward axis, cm
 }
 
 /** Height of each pose's pivot above the skin (the GLBs are centred on their bounds). */
 const POSE_LIFT: Record<HandPose, number> = {palm: 3.0, fist: 3.3, thumb: 5.2, fingertips: 5.6, forearm: 4.4}
 const POSES: HandPose[] = ["palm", "fist", "thumb", "fingertips", "forearm"]
+/**
+ * Where on the hand the contact point is, as a fraction of its half-length
+ * back from the centre toward the wrist: fingertips touch at the front end,
+ * the palm in the middle, the forearm behind the wrist. Used only when the
+ * fingers point toward the head, so the hand does not overhang the stroke.
+ */
+const CONTACT_BACK: Record<HandPose, number> = {palm: 0.15, fist: 0.6, thumb: 0.6, fingertips: 0.8, forearm: 0.75}
 
 @component
 export class MasseurGhostHands extends BaseScriptComponent {
@@ -66,6 +76,9 @@ export class MasseurGhostHands extends BaseScriptComponent {
   @hint("Fade in / out time in seconds")
   @widget(new SliderWidget(0.1, 2, 0.1))
   fadeSec: number = 0.6
+  @input
+  @hint("Point the fingers toward the client's head (masseur kneeling on the thighs); off = follow the stroke direction")
+  fingersTowardHead: boolean = true
   @ui.group_end
   private hands: Record<string, HandInstance[]> = {}
 
@@ -125,16 +138,19 @@ export class MasseurGhostHands extends BaseScriptComponent {
         root.setParent(this.getSceneObject())
         const mats: Material[] = []
         const prefab = prefabs[pose]
+        let halfLength = 0
         if (prefab) {
           const inst = prefab.instantiate(root)
           const s = inst.getTransform().getLocalScale()
           if (mirrorX) inst.getTransform().setLocalScale(new vec3(-Math.abs(s.x), s.y, s.z))
           this.applyGhost(inst, mats)
+          halfLength = forwardHalfLength(root, inst)
         }
         root.enabled = false
-        this.hands[pose].push({root, mats})
+        this.hands[pose].push({root, mats, halfLength})
       }
     }
+    print(`MasseurGhostHands: half-lengths ${POSES.map((p) => `${p} ${this.hands[p][0].halfLength.toFixed(1)}`).join(", ")} cm`)
   }
 
   private applyGhost(obj: SceneObject, mats: Material[]): void {
@@ -191,6 +207,12 @@ export class MasseurGhostHands extends BaseScriptComponent {
       } else {
         continue
       }
+      // the mannequin's local +Z runs from the body toward the crown
+      if (this.fingersTowardHead) {
+        tan = new vec3(0, 0, 1)
+        // slide the hand back so its contact point, not its centre, is on the stroke
+        local = local.add(new vec3(0, 0, -h.halfLength * CONTACT_BACK[this.pose]))
+      }
       h.root.enabled = true
       const t = h.root.getTransform()
       t.setWorldPosition(toWorld.multiplyPoint(local))
@@ -199,4 +221,25 @@ export class MasseurGhostHands extends BaseScriptComponent {
       for (const m of h.mats) m.mainPass.baseColor = new vec4(c.x, c.y, c.z, c.w * this.alpha)
     }
   }
+}
+
+/** Half of the hand's extent along the root's local Z, from the render mesh bounds. */
+function forwardHalfLength(root: SceneObject, obj: SceneObject): number {
+  const inv = root.getTransform().getInvertedWorldTransform()
+  let minZ = Infinity, maxZ = -Infinity
+  const visit = (o: SceneObject): void => {
+    const rmv = o.getComponent("Component.RenderMeshVisual") as RenderMeshVisual
+    if (rmv && rmv.mesh) {
+      const m = inv.mult(o.getTransform().getWorldTransform())
+      const a = rmv.mesh.aabbMin, b = rmv.mesh.aabbMax
+      for (const x of [a.x, b.x]) for (const y of [a.y, b.y]) for (const z of [a.z, b.z]) {
+        const p = m.multiplyPoint(new vec3(x, y, z))
+        minZ = Math.min(minZ, p.z)
+        maxZ = Math.max(maxZ, p.z)
+      }
+    }
+    for (let i = 0; i < o.getChildrenCount(); i++) visit(o.getChild(i))
+  }
+  visit(obj)
+  return isFinite(minZ) ? (maxZ - minZ) / 2 : 0
 }

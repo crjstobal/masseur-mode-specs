@@ -30,6 +30,7 @@
   ScriptInputsHidden:
     cyclesToShow: false
     fadeSec: false
+    fingersTowardHead: false
     fingertipsPrefab: false
     fistPrefab: false
     forearmPrefab: false
@@ -55,6 +56,7 @@
       ghostColor: !<Vec4> {x: 0.850000, y: 0.970000, z: 1.000000, w: 0.380000}
       cyclesToShow: !<float> 2.000000
       fadeSec: 0.600000
+      fingersTowardHead: true
   ScriptTypes:
     -
       {}
@@ -74,4 +76,5 @@
     - '// @input vec4 ghostColor = "{0.85, 0.97, 1.0, 0.38}" {"hint":"Ghost hand tint and opacity", "widget":"color"}'
     - '// @input float cyclesToShow = 2 {"hint":"How many times the hands perform the move before fading out", "widget":"slider", "min":1, "max":5, "step":1}'
     - '// @input float fadeSec = 0.6 {"hint":"Fade in / out time in seconds", "widget":"slider", "min":0.1, "max":2, "step":0.1}'
+    - "// @input bool fingersTowardHead = true {\"hint\":\"Point the fingers toward the client's head (masseur kneeling on the thighs); off = follow the stroke direction\"}"
     - '// @ui {"widget":"group_end"}'

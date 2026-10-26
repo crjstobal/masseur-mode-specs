@@ -39,6 +39,10 @@ export class MasseurEdgeHintUI extends BaseScriptComponent {
   @hint("Sideways offset from the centre of the view, cm")
   @widget(new SliderWidget(5, 30, 0.5))
   sideOffsetCm: number = 15
+  @input
+  @hint("Vertical offset from the centre of the view, cm (up keeps it off the client's back)")
+  @widget(new SliderWidget(-20, 20, 0.5))
+  upOffsetCm: number = 11
   @ui.group_end
   private visible = false
 
@@ -70,7 +74,7 @@ export class MasseurEdgeHintUI extends BaseScriptComponent {
     const fwd = rot.multiplyVec3(new vec3(0, 0, -1)) // camera looks down its local -Z
     const right = rot.multiplyVec3(new vec3(1, 0, 0))
     const up = rot.multiplyVec3(new vec3(0, 1, 0))
-    const pos = camPos.add(fwd.uniformScale(this.distanceCm)).add(right.uniformScale(this._side * this.sideOffsetCm)).add(up.uniformScale(-3))
+    const pos = camPos.add(fwd.uniformScale(this.distanceCm)).add(right.uniformScale(this._side * this.sideOffsetCm)).add(up.uniformScale(this.upOffsetCm))
     const t = this.getTransform()
     t.setWorldPosition(pos)
     t.setWorldRotation(quat.lookAt(camPos.sub(pos).normalize(), up))

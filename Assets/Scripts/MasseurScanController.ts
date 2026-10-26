@@ -112,7 +112,8 @@ export class MasseurScanController extends BaseScriptComponent {
 
   private onUpdate(dt: number): void {
     if (this.scanning) {
-      this.t = Math.min(1, this.t + dt / Math.max(0.2, this.scanDurationSec))
+      // clamp the step so a frame hitch does not skip the visible sweep
+      this.t = Math.min(1, this.t + Math.min(dt, 0.25) / Math.max(0.2, this.scanDurationSec))
       const vb = -0.08 + 1.16 * this.t
       for (const d of this.dots) {
         if (!d.revealed && vb >= d.v) {
@@ -199,7 +200,7 @@ export class MasseurScanController extends BaseScriptComponent {
         const k = 0.8 * rowGlow * edge * this.bandFade
         out[0] = local.x; out[1] = local.y; out[2] = local.z
         out[3] = 0; out[4] = 1; out[5] = 0
-        out[6] = col.x * k; out[7] = col.y * k; out[8] = col.z * k; out[9] = 1
+        out[6] = col.x * k; out[7] = col.y * k; out[8] = col.z * k; out[9] = Math.min(1, k)
         b.setVertexInterleaved(r * BAND_COLUMNS + c, out)
       }
     }
@@ -239,7 +240,7 @@ export class MasseurScanController extends BaseScriptComponent {
       const a = center ? 0 : ((i - 1) / seg) * Math.PI * 2
       const x = center ? 0 : Math.sin(a) * 1.1
       const z = center ? 0 : -Math.cos(a) * 1.1
-      b.setVertexInterleaved(i, [x, 0, z, 0, 1, 0, col.x * k, col.y * k, col.z * k, 1])
+      b.setVertexInterleaved(i, [x, 0, z, 0, 1, 0, col.x * k, col.y * k, col.z * k, Math.min(1, k)])
     }
     b.updateMesh()
   }

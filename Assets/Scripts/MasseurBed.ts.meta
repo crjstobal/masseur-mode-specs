@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/935d1f32-a024-45bd-8897-f1703de9226f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 179b5674-7242-4f51-ab43-3a617309cae6
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 179b5674-7242-4f51-ab43-3a617309cae6
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7afeff7b-0311-4e07-80ac-9d1870c23e1e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7afeff7b-0311-4e07-80ac-9d1870c23e1e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a84a21d8-a66d-490f-ad9b-dc1654eb3f55
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    baseMaterial: false
+    duvetColor: false
+    lengthCm: false
+    mattressTopCm: false
+    sheetColor: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - baseMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      widthCm: !<float> 160.000000
+      lengthCm: !<float> 200.000000
+      mattressTopCm: !<float> 50.000000
+      sheetColor: !<Vec3> {x: 0.960000, y: 0.960000, z: 0.940000}
+      duvetColor: !<Vec3> {x: 0.980000, y: 0.930000, z: 0.840000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MasseurBed - low double bed, sheet, duvet, pillow</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input Asset.Material baseMaterial {"hint":"Lit material; tinted copies are made for each part"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float widthCm = 160 {"hint":"Bed width in cm", "widget":"slider", "min":90, "max":200, "step":1}'
+    - '// @input float lengthCm = 200 {"hint":"Bed length in cm", "widget":"slider", "min":180, "max":220, "step":1}'
+    - '// @input float mattressTopCm = 50 {"hint":"Height of the mattress top above the floor in cm", "widget":"slider", "min":30, "max":70, "step":1}'
+    - '// @input vec3 sheetColor = "{0.96, 0.96, 0.94}" {"hint":"Sheet color", "widget":"color"}'
+    - '// @input vec3 duvetColor = "{0.98, 0.93, 0.84}" {"hint":"Duvet color", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

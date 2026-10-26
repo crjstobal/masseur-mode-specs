@@ -1,0 +1,128 @@
+{
+ "id": "masseur_client",
+ "spec": "../../../HACKATON/22-Learn-AR-SPECS (2026-11-09)/Masseur Mode/art/masseur_client.json",
+ "size_m": [
+  0.497,
+  1.949,
+  0.293
+ ],
+ "meshes": {
+  "body": "masseur_client_skin",
+  "eyebrow001": "masseur_client_eyebrow001",
+  "eyelashes01": "masseur_client_eyelashes01",
+  "high-poly": "masseur_client_eyes",
+  "short02": "masseur_client_short02",
+  "x_towel": "masseur_client_towel"
+ },
+ "materials": {
+  "masseur_client_skin": {
+   "color": [
+    0.8962693533742664,
+    0.7912979403326302,
+    0.7156935005064807
+   ],
+   "rough": 0.62,
+   "tile": 1.0,
+   "alpha": false,
+   "sss": 0.18,
+   "diff": "tex/young_caucasian_male__young_lightskinned_male_diffuse.png"
+  },
+  "masseur_client_eyes": {
+   "color": [
+    0.86,
+    0.85,
+    0.85
+   ],
+   "rough": 0.4,
+   "tile": 1.0,
+   "alpha": true,
+   "sss": 0.0,
+   "diff": "tex/materials__brown_eye.png"
+  },
+  "masseur_client_eyebrow001": {
+   "color": [
+    0.04817182422688942,
+    0.02518685962736163,
+    0.014443843596092545
+   ],
+   "rough": 0.45,
+   "tile": 1.0,
+   "alpha": true,
+   "sss": 0.0,
+   "diff": "tex/eyebrow001__eyebrow001_gray.png"
+  },
+  "masseur_client_eyelashes01": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "rough": 0.45,
+   "tile": 1.0,
+   "alpha": true,
+   "sss": 0.0,
+   "diff": "tex/eyelashes01__eyelashes01.png"
+  },
+  "masseur_client_short02": {
+   "color": [
+    0.04817182422688942,
+    0.02518685962736163,
+    0.014443843596092545
+   ],
+   "rough": 0.45,
+   "tile": 1.0,
+   "alpha": true,
+   "sss": 0.0,
+   "diff": "tex/short02__short02_diffuse_gray.png"
+  },
+  "masseur_client_towel": {
+   "color": [
+    0.8631572134541023,
+    0.8227857543962835,
+    0.7454042095403874
+   ],
+   "rough": 0.85,
+   "tile": 4,
+   "alpha": false,
+   "sss": 0.0,
+   "diff": "tex/fabric__terry_cloth_gray.jpg",
+   "nor": "tex/terry_cloth__nor_gl.jpg",
+   "nor_strength": 0.6
+  }
+ },
+ "credits": [
+  {
+   "asset": "short02",
+   "kind": "hair",
+   "source": "MakeHuman community asset packs (via MPFB2)",
+   "url": "http://static.makehumancommunity.org/assets/assetpacks.html",
+   "author": "makehuman_system",
+   "license": "CC0"
+  },
+  {
+   "asset": "eyebrow001",
+   "kind": "eyebrows",
+   "source": "MakeHuman community asset packs (via MPFB2)",
+   "url": "http://static.makehumancommunity.org/assets/assetpacks.html",
+   "author": "makehuman_system",
+   "license": "CC0"
+  },
+  {
+   "asset": "eyelashes01",
+   "kind": "eyelashes",
+   "source": "MakeHuman community asset packs (via MPFB2)",
+   "url": "http://static.makehumancommunity.org/assets/assetpacks.html",
+   "author": "makehuman_system",
+   "license": "CC0"
+  },
+  {
+   "asset": "young_caucasian_male",
+   "kind": "skin",
+   "source": "MakeHuman community asset packs (via MPFB2)",
+   "url": "http://static.makehumancommunity.org/assets/assetpacks.html",
+   "author": "makehuman_system",
+   "license": "CC0"
+  }
+ ],
+ "note": "paths relative to characters/out; colours linear; tile = UV repeat"
+}
