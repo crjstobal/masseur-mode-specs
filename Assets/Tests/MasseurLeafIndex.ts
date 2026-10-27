@@ -10,6 +10,7 @@ import {MasseurC3AnchorScenario} from "./MasseurC3AnchorScenario"
 import {MasseurC4ControlsScenario} from "./MasseurC4ControlsScenario"
 import {MasseurC5StepEndScenario} from "./MasseurC5StepEndScenario"
 import {MasseurReachScenario} from "./MasseurReachScenario"
+import {MasseurDemoScenario} from "./MasseurDemoScenario"
 
 @component
 export class MasseurLeafIndex extends BaseScriptComponent {
@@ -21,5 +22,6 @@ export class MasseurLeafIndex extends BaseScriptComponent {
     {id: "c4-control-bar", typename: MasseurC4ControlsScenario.getTypeName()},
     {id: "c5-step-end", typename: MasseurC5StepEndScenario.getTypeName()},
     {id: "reach-ik", typename: MasseurReachScenario.getTypeName()},
+    {id: "demo-video", typename: MasseurDemoScenario.getTypeName()},
   ]
 }
